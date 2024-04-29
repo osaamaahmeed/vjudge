@@ -8,11 +8,14 @@ int main () {
   bool xg2 = false,yg2 = false;
   int x,y; cin >> x >> y;
   if (x == y) {cout << "Yes"; return 0;}
+
+
   for (int i = 0; i < 7; i++) {
     if (arrA[i] == x) {xg1 = true;}
     if (arrA[i] == y) {yg1 = true;}
   }
   if (xg1 && yg1) {cout << "Yes"; return 0;}
+
 
   for (int i = 0; i < 4; i++)
   {

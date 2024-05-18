@@ -2,6 +2,11 @@
   "files.associations": {
     "*.embeddedhtml": "html",
     "*.php": "php",
-    "iostream": "cpp"
+    "iostream": "cpp",
+    "chrono": "cpp",
+    "bitset": "cpp",
+    "string_view": "cpp",
+    "stacktrace": "cpp",
+    "ostream": "cpp"
   }
 }

@@ -3,23 +3,18 @@ using namespace std;
 #define ll long long
 
 int main () {
+  ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
   int t; cin >> t;
   while (t--) {
-    ll res = 0;
     int n; cin >> n;
     string s; cin >> s;
-    deque<char>d(50);
-    // auto it = d.end()-1;
-    int index = 0;
-    for (int i = 0; i < n; i++) {
-        if (char(d.at(0)) != s[i]) {
-        d.push_front(s[i]);
-        res++;
-        }
+    int freq[91] = {0};
+    for (int i = 0; i < n; i++) freq[s[i]]++;
+    int sum = 0;
+    for (int i = 0; i < 91; i++) {
+      if (freq[i] > 0) sum++;
+      sum += freq[i];
     }
-    cout << "\n================\n";
-    for (int i : d) cout << char(i) << " ";
-    res += n;
-    cout << endl << res << endl;
+    cout << sum << '\n';
   }
 }

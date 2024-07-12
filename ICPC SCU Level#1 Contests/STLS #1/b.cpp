@@ -1,29 +1,46 @@
 #include <bits/stdc++.h>
 using namespace std;
 #define ll long long
+#define endl "\n"
 
-bool prime (int x) {
-  if (x == 1) return false;
-  if (x == 2) return true;
-  for (int i = 0; i < sqrt(x); i++) {if (x % i == 0) return false; }  
-  return true;
+bool isPrime (int n) {
+  if (n < 2) return 0;
+  else if (n == 2) return 1;
+  else if (n % 2 == 0) return 0;
+  else {
+    for (int i = 3; i <= sqrt(n); i++) {
+      if (n % i == 0) return 0;
+    }
+  }
+  return 1;
 }
 
-bool revserPrime (int x) {
-  int temp = 0;
-  while (x) {
-    temp += x % 10;
-    x /= 10;
+void solve (int a, int b) {
+  int counter = 0;
+  for (int i = min(a,b); i <= max(a,b); i++) {
+    int number = i;
+    int mirro=0;
+    while (number) {
+      mirro *= 10;
+      mirro += number % 10;
+      number /= 10;
+    }
+    if (isPrime(i) && isPrime(mirro)) {
+      // cout << i << " " << mirro << endl;
+      counter++;
+    }
   }
-  if(prime(temp)) return true;
-  else return false;
+  // for (int i = min(a,b); i <= max(a,b); i++) {
+  //   string temp = to_string(i);
+  //   temp.reserve();
+  //   int mirro = stoi(temp);
+  //   if (isPrime(i) && isPrime(mirro)) counter++;
+  // }
+  cout << counter;
 }
 
 int main () {
+  ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
   int a,b; cin >> a >> b;
-  int counter = 0;
-  for (int i = a; i <= b; i++) {
-    if (prime(i) && revserPrime(i)) counter++;
-  }
-  cout << counter;
+  solve(a,b);
 }

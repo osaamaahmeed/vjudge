@@ -1,3 +1,15 @@
+> [!IMPORTANT]
+> **This repo is archived.** <br><br> All my Problem Solving work now lives in
+> **[osaamaahmeed/Problem-Solving](https://github.com/osaamaahmeed/Problem-Solving)**: <br><br>
+> The solutions from this repo are kept there under `archive/`.
+> 
+
+<br>
+<br>
+<br>
+<br>
+
+
 <h2> Solving Problems on Virtual Judge Website ^_^ </h2>
  <details>
    <summary> 🔄 <a href="https://vjudge.net/group/devs">  DevS Problem Solving Sheets </a> &nbsp;&nbsp; <span> (███████░░░) 73.7% </span> &nbsp;&nbsp; <i> ~currently solving~ </i> </summary> 
